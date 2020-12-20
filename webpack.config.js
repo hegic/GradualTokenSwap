@@ -86,7 +86,7 @@ module.exports = {
             title: 'Hegic token swap',
             filename: 'index.html',
         }),
-        // new FaviconsWebpackPlugin('assets/logo.png'),
+        new FaviconsWebpackPlugin('assets/logo.png'),
         // new webpack.HotModuleReplacementPlugin(),
         new VueLoaderPlugin(),
 	      new webpack.DefinePlugin({

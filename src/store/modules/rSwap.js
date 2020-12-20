@@ -15,16 +15,18 @@ export default {
       subscribe(state, id){state.sID = id},
     },
     actions:{
-      subscribe({dispatch}){
-        rootState.contracts.rSwap.events.TokenSwapped()
+      subscribe({dispatch, rootState}){
+        rootState.contracts.rSwap.events.TokensSwapped()
           .on('data', () => dispatch('updateBalances'))
       },
       async updateBalances({commit, rootState}){
         const {rSwap, rHEGIC} = rootState.contracts
         const account = rootState.accounts[0]
         return Promise.all([
-          rHEGIC.methods.balanceOf(account).call().then(toBN).then(x=>commit('setrHEGIC',x)),
           rSwap.methods.availableAmount().call().then(toBN).then(x=>commit('setSwappable',x)),
+          account ?
+            rHEGIC.methods.balanceOf(account).call().then(toBN).then(x=>commit('setrHEGIC',x))
+            : null,
         ])
       },
       async init({dispatch}){

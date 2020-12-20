@@ -74,7 +74,7 @@ const store = createStore({
         },
     }
 })
-// store.commit('resetProvider')
+store.dispatch('connection/tryReconnect')
 
 window.s = store
 export default store
