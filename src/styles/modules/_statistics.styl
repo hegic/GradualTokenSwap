@@ -1,0 +1,126 @@
+@import '_fonts'
+@import '_colors'
+
+
+.main.statistics
+	.dai-pool__table
+		.hero-link
+			font-size 12px
+	.form-periods
+		width 280px
+		.periods__period-text
+			font-size 16px
+		@media screen and (max-width 768px)
+			width 100%
+			.periods__period-text
+				font-size 14px		
+
+
+
+.statistics-pools
+	display flex
+	.dai-pool-box
+		flex 1
+		margin 0 20px
+		&:first-child
+			margin-left 0
+		&:last-child
+			margin-right 0
+		
+	@media screen and (max-width 1024px)
+		flex-direction column
+		.dai-pool-box
+			margin 20px 0
+
+
+
+.summary-card__title
+	font-family: Jura;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 150%;
+	text-transform: uppercase;
+	color: Cyan;
+	text-shadow: 0 0 2px #45fff480;
+	margin-bottom: 5px;
+	padding: 10px 5px;
+	text-align: center;
+.summary-card__value
+	font-family: Jura;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 100%;
+	text-align: center;
+	color: #defefe;
+	margin-bottom: 5px;
+	padding: 0 10px 10px 10px;
+
+
+
+.summary-cards
+	display flex
+	flex-wrap: wrap;
+	justify-content: space-between;
+	@media screen and (max-width 1024px)
+		flex-direction: row !important;
+	.additional
+		font-size 16px
+.summary-card
+	background-color Dark-Blue
+	margin: 10px;
+	flex auto
+	// padding: 15px 10px;
+	cursor: default; 
+	@media screen and (max-width 768px)
+		width 45%
+		margin 10px
+		&:nth-child(2n)
+			margin-right 0
+		&:nth-child(2n+1)
+			margin-left 0
+		min-height 60px
+		.summary-card__title
+			font-size 14px
+			padding 5px 2px
+			margin-bottom 0
+		.summary-card__value
+			font-size 14px
+			// padding 5px 2px
+			margin-bottom 0
+	@media screen and (min-width 769px) and (max-width 1024px)
+		width: 45%
+		&:nth-child(2n)
+			margin-right 0
+		&:nth-child(2n+1)
+			margin-left 0
+		min-height 60px
+		.summary-card__title
+			font-size 14px
+			padding 5px 2px
+			margin-bottom 0
+		.summary-card__value
+			font-size 14px
+			padding 5px 2px
+			margin-bottom 0
+	@media screen and (min-width 1025px) and (max-width 1280px)
+		width: 46%
+		&:nth-child(2n)
+			margin-right 0
+		&:nth-child(2n+1)
+			margin-left 0
+	@media screen and (min-width 1281px)
+		width: 25%
+		&:nth-child(3n)
+			margin-right 0
+		&:nth-child(3n+1)
+			margin-left 0
+	// &:first-child
+	// 	margin-left 10px !important
+	// &:last-child
+	// 	margin-right 10px !important
+	
+	.document-angles
+		flex-direction: column;
+		justify-content: center;

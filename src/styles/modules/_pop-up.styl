@@ -1,0 +1,205 @@
+@import '_fonts'
+@import '_colors'
+
+
+
+.help
+	height 60px
+	background Blue
+	z-index 1
+
+	font-family: Exo2;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 150%;
+	text-align: center;
+
+	color: #DEFEFE;
+	display flex
+	.text
+		margin auto
+	a
+		color: Cyan;
+		border-bottom: 1px dashed Cyan;
+		padding-bottom: 1px;
+		cursor: pointer;
+	&.stock
+		min-height: 60px;
+		height: auto;
+		.text
+			margin 10px auto
+			line-height 130%
+			font-size 14px
+			padding 0 15px
+	&.use-chrome
+		height auto
+		.text
+			font-size 14px
+			position relative
+			padding: 8px 25px 8px 55px;
+			&:before
+				content ''
+				height 100%
+				width 20px
+				position absolute
+				background url('/assets/img/google-chrome.svg')
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				left 25px
+				top 0
+
+
+.pop-up
+	position fixed
+	height 100%
+	width 100%
+	z-index 10
+	background: #19274d80;
+	transition: background 1s, z-index 1s;
+	display flex
+	overflow: auto;
+	padding: 10px
+	box-sizing: border-box;
+	// .form-info-box
+	// 	z-index 10
+	// .button
+	// 	width 100%
+	// 	margin-top 15px
+	.form__header
+		&:after
+			width 150px
+		&.error
+			color Warning-Yellow
+
+.pop-up__box
+	overflow: auto;
+	width: 550px;
+	height: auto;
+	// height: 562px;
+	margin auto
+	// clip-path: polygon(15px 0%, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0% 15px)
+	// background Cyan
+	position relative
+	padding 40px
+	box-sizing: border-box;
+	@media screen and (max-width 768px)
+		min-width 280px
+		width: auto;
+		margin: auto;
+	.form__info
+		height: 44px;
+		flex-direction: row !important
+		&.inp
+			height auto
+			margin-bottom: 30px;
+			.form-info-box
+				display block
+				margin 0
+			.text
+				margin-bottom 10px
+				text-align left
+				font-family: Exo2;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 100%;
+				color: Ultralight-Blue;
+
+	.form-info-box
+		display flex
+		.text
+			font-family: Jura;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 20px;
+			line-height: 100%;
+			text-align: center;
+			color: #FFFFFF;
+			margin-bottom 0
+			margin auto
+
+
+	>.text
+		font-size: 14px;
+		line-height: 150%;
+		text-align: center;
+		margin 30px 0 15px 0
+		&.big
+			font-size 16px
+
+	&:before
+		z-index -1
+		content ''
+		position absolute
+		height: calc(100% - 2px);
+		width: calc(100% - 2px);
+		top: 1px;
+		left: 1px;
+		bottom: 1px;
+		right: 1px;
+		background  Dark-Blue;
+		clip-path: polygon(15px 0%, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0% 15px)
+	&:after
+		z-index -2
+		content ''
+		position absolute
+		height: 100%
+		width: 100%
+		top: 0px;
+		left: 0px;
+		bottom: 0px;
+		right: 0px;
+		background Cyan;
+		clip-path: polygon(15px 0%, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0% 15px)
+
+.pop-up__close
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	right: 10px;
+	top: 10px;
+	background url('/assets/img/pop-up-close.svg')
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor pointer
+	&:hover
+		filter: drop-shadow(0 0 1px Cyan);
+
+
+.pop-up__buttons
+	.button
+		width 100%
+		margin-top 15px
+	@media screen and (max-width 768px)
+		display flex
+		flex-direction row-reverse;
+		.button
+			margin-left 10px
+			&:last-child
+				margin-left 0
+
+.pop-up__img
+	margin 40px auto 0 auto
+	&.loading
+		width: 280px;
+		height: 35px;
+		background url('/assets/img/loader.svg')
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		@media screen and (max-width 768px)
+			width: 220px;
+			height: 27px;
+	&.error
+		width: 275px;
+		height: 180px;
+		background url('/assets/img/error.svg')
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		@media screen and (max-width 768px)
+			width: 180px;
+			height: 145px;

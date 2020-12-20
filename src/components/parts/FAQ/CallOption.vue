@@ -1,0 +1,14 @@
+<template>
+	<div>
+
+		<div class="faq-dropdown" v-for="i in $tm(`faq.questions.call`).length">
+			<div class="dropdown__question" onclick="this.classList.toggle('open')">
+				<div class="dropdown__question--text" v-html="$t(`faq.questions.call[${i-1}].title`)"></div>
+			</div>
+			<div class="dropdown__answer">				   
+				<div class="dropdown__answer--text" v-html="$t(`faq.questions.call[${i-1}].text`)"></div>
+			</div>
+		</div>
+
+	</div>
+</template>

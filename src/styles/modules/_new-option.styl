@@ -1,0 +1,372 @@
+@import '_fonts'
+@import '_colors'
+
+
+//section--new-option
+
+
+@media screen and (max-width 768px)
+	// .new-option__schedule-infos
+	// 	margin-left 0 !important
+	.new-option__schedule-box
+		display none
+	.new-option__schedule-info
+		margin-right: 20px;
+		min-height 120px
+@media screen and (min-width 769px) and (max-width 1024px)
+	// .new-option__schedule-infos
+	// 	margin-left 0 !important
+	.new-option__data
+		flex-direction column
+	.new-option__schedule-info
+		margin-right: 20px;
+		min-height 120px
+	.new-option-settings__info
+		margin-top 0
+@media screen and (min-width 1025px) and (max-width 1280px)
+	// .new-option__schedule-infos
+	// 	margin-left 0 !important
+	.new-option__data
+		flex-direction column
+	.new-option__schedule-info
+		min-height 120px
+	.new-option-settings__info
+		margin-right: 20px;
+		margin-top 0
+	.new-option__schedule-infos
+		flex-direction row
+		.new-option__schedule-info
+			margin 20px 0 0 0
+	
+
+
+
+.new-option__data
+	display flex
+	
+	background: Dark-Blue;
+	border: 2px solid Blue;
+	box-sizing: border-box;
+	padding 20px
+.new-option-settings
+	background Blue
+	.form__info
+		padding 30px 40px
+	@media screen and (max-width 768px)
+		.form__info
+			padding 30px 20px
+		.new-option-settings__info
+			margin-top 0
+		.radio
+			max-width 100% !important
+	@media screen and (min-width 769px) and (max-width 1024px)
+		.form__info
+			flex-wrap: wrap;
+			flex-direction row
+			padding 30px 40px !important
+			.form-info-box
+				width 50%
+				flex auto
+				margin-left: 0;
+				margin-right: 0;
+				margin: 20px 0 0 0
+				&:nth-child(2n+1)
+					padding-right: 20px !important;
+					box-sizing: border-box;
+				&:nth-child(2n)
+					padding-left: 20px !important;
+					box-sizing: border-box;
+				&:nth-child(-n+2)
+					margin: 0 0 0 0 !important;
+					
+		.form__info
+			padding 30px 20px
+		.radio
+			max-width 100% !important
+	@media screen and (min-width 1025px) and (max-width 1280px)
+		.form__info
+			flex-direction row
+		.form__info
+			padding 30px 20px
+
+
+.new-option__schedule-box
+	padding 20px
+	flex 2
+.schedule
+	min-width: 310px;
+	position relative	
+	&[data-state='0']
+		.schedule__line.current
+			top 0
+	&[data-state='1']
+		.schedule__line.current
+			top 61px
+	&[data-state='3']
+		.schedule__line.current
+			top 157px
+	&[data-state='4']
+		.schedule__line.current
+			top 220px
+						
+	&[data-type='put']
+		&[data-state='2']
+			.schedule__line.current
+				top 93px
+		&[data-state='3']
+			.schedule-value.break-even
+				right 0
+		.schedule-value
+			&.strike
+				top 82px
+				right 0
+				background #FFD24C
+			&.break-even
+				top 177px
+				background Cyan
+		.schedule-zone
+			&.top
+				&:before
+					background: linear-gradient(180deg, rgba(247, 110, 178, 0.1) 0%, rgba(247, 110, 178, 0.5) 100%);
+				.schedule__line
+					border-color #365096
+				border-bottom 3px solid #FFD24C
+			&.bottom
+				&:before
+					background: linear-gradient(180deg, rgba(69, 255, 244, 0.6) 0%, rgba(69, 255, 244, 0.2) 100%);		
+				border-top 3px solid Cyan
+	&[data-type='call']
+		&[data-state='1']
+			.schedule-value.break-even
+				right 0
+		&[data-state='2']
+			.schedule__line.current
+				top 126px
+		.schedule-value
+			&.strike
+				top 177px
+				right 0
+				background #FFD24C
+			&.break-even
+				top 82px
+				background Cyan
+		.schedule-zone
+			&.bottom
+				&:before
+					background: linear-gradient(180deg, rgba(247, 110, 178, 0.1) 0%, rgba(247, 110, 178, 0.5) 100%);
+					transform: rotate(180deg);	
+				.schedule__line
+					border-color #365096
+				border-top 3px solid #FFD24C
+			&.top
+				&:before
+					background: linear-gradient(180deg, rgba(69, 255, 244, 0.6) 0%, rgba(69, 255, 244, 0.2) 100%);
+					transform: rotate(180deg);	
+				border-bottom 3px solid Cyan
+
+.schedule__line
+	height 30px
+	border-bottom 1px solid #365096
+	&:nth-child(1)
+		border-top 1px solid #365096
+	&.current
+		border-bottom 3px solid white
+		position absolute
+		width 100%
+		z-index 1
+		transition: top 2s
+		&:before
+			content attr(data-value)
+			height 22px
+			min-width 150px
+			position absolute
+			bottom -1px
+			transform translate(0, 50%)
+			background white
+			text-align: center;
+
+			font-family: Exo2;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 12px;
+			line-height: 100%;
+			
+			padding: 5px 10px;
+			box-sizing: border-box;
+.schedule-value
+	position absolute
+	height 22px
+	min-width 150px
+	
+	font-family: Exo2;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 100%;
+	text-align: center;
+	color: #000000;
+
+	padding: 5px 10px;
+	box-sizing: border-box;
+	z-index 2
+	
+	max-width: 45%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	span
+		font-weight: bold;	
+.schedule-zone
+	position relative
+	&:before
+		content ''
+		height 100%
+		width 100%
+		position absolute
+	&.top
+		.schedule__line
+			&:last-child
+				height 27px
+	&.bottom
+		.schedule__line
+			&:first-child
+				height 27px
+
+// .schedule__legend
+.schedule-legend__title
+	font-family: Exo2;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 160%;
+	text-align: center;
+
+	color: #FFFFFF;
+	
+	margin 23px auto 15px auto
+.schedule-legend__vals
+	display flex
+	justify-content: center;
+.schedule-legend__val
+	font-family: Exo2;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 160%;
+	color: #FFFFFF;
+	position relative
+	padding-left 19px
+	margin-right 20px
+	&:last-child
+		margin-right 0
+	&:before
+		content ''
+		position absolute
+		height 14px
+		width 14px
+		border-radius 5px
+		left 0
+		top: 50%;
+		transform: translate(0, -50%);
+	&.red
+		&:before
+			background #F986BF
+	&.green
+		&:before
+			background Cyan
+	&.blue
+		&:before
+			background #0f5467
+	&.lp
+		&:before
+			background #1d509e
+
+
+.new-option__schedule-infos
+	flex 1
+	display: flex;
+	flex-direction: column;
+	margin-left 20px
+	overflow hidden
+.new-option__schedule-info
+	flex 1
+	position relative
+	margin-bottom 15px
+	background: linear-gradient(90deg, #203060 0%, #24366B 51.04%, #203060 100%);
+	padding-left 5px
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	overflow hidden
+	&:last-child
+		margin-bottom 0
+	&:before
+		content ''
+		height 100%
+		width 5px
+		position absolute
+		left 0
+	&.strike
+		&:before
+			background Warning-Yellow
+	&.red
+		&:before
+			background #F76EB2
+	&.green
+		&:before
+			background Cyan
+	&.blue
+		&:before
+			background #0f5467
+	&.lp
+		&:before
+			background Juicy-Blue
+	&.nlp
+		&:before
+			background Cyan
+.n-o-schedule-info__title
+	font-family: Exo2;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 160%;
+	align-items: center;
+	text-align: center;
+	color: #DEFEFE;
+	padding-bottom: 5px
+.n-o-schedule-info__val
+	font-family: Jura;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 100%;
+	text-align: center;
+	color: #DEFEFE;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	&.fix-b-c
+		display flex
+		flex-direction column
+	.additional
+		font-size: 14px;
+		color Accent-Blue
+.new-option-settings__info
+	flex-direction column !important
+	.hot-fix
+		margin-bottom 0 !important
+	.n-o__text
+		font-family: Exo2;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 160%;
+		text-align: center;
+
+		color: #DEFEFE;
+		text-align center
+		margin-bottom 20px
+		.bold
+			font-weight: bold;
+	.button
+		width 100%

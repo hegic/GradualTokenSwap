@@ -1,0 +1,186 @@
+@import '_fonts'
+@import '_colors'
+
+
+//section--stats
+.statuses-box
+	display flex
+	@media screen and (max-width 768px)
+		flex-direction column
+		.status-box
+			margin 20px 0 0 0
+			&:first-child
+				margin-top 0
+	@media screen and (min-width 769px) and (max-width 1024px)
+		.status-box
+			padding-left 75px
+			&:before
+				height 60px
+				width 60px
+		.status__value
+			font-size: 20px;
+			line-height: 125%;
+		.status__title
+			font-size: 16px;
+
+
+
+.status-box
+	display flex
+	flex-direction: column;
+	position relative
+	margin 0 10px
+	flex 1
+	padding-left 100px
+	position relative
+	&:first-child
+		margin-left 0
+	&:last-child
+		margin-right 0
+	&:before
+		content ''
+		position absolute
+		height 75px
+		width 75px
+		left 0
+		top: 50%;
+		transform: translate(0, -50%);
+	&.volume
+		&:before
+			background url('/assets/img/icon-volume.svg')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+	&.turnover
+		&:before
+			background url('/assets/img/icon-turnover.svg')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+	&.premiums
+		&:before
+			background url('/assets/img/icon-premiums.svg')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+	&.pool
+		&:before
+			background url('/assets/img/icon-pool.svg')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+
+.status__title
+	font-family: Exo2;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 125%;
+
+	color: Ultralight-Blue;
+
+.status__value	
+	font-family: Jura;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 125%;
+
+	color: Cyan;
+
+	text-shadow: 0px 0px 2px rgba(69, 255, 244, 0.9);
+	
+	margin-top 5px
+	white-space: nowrap;
+
+
+
+.section.status.common
+	.statuses-box
+		border: 1px solid #22596d;
+		background: #19264d;
+		@media screen and (max-width 768px)
+			flex-direction column
+			.status-box
+				margin 20px 0 0 0
+				&:first-child
+					margin-top 0
+		@media screen and (min-width 769px) and (max-width 1024px)
+			flex-direction column
+			.status-box
+				margin 20px 0 0 0
+				&:first-child
+					margin-top 0
+	.statuses-box
+		margin 2px 0
+		&.head
+			padding: 10px 5px;
+			@media screen and (max-width 768px)
+				display none
+			@media screen and (min-width 769px) and (max-width 1024px)
+				display none
+			.status__title
+				margin auto 0
+			.status-box
+				// margin 0 15px
+				// padding-left 55px
+				margin: 0 15px;
+				padding-top: 55px;
+				padding-left 0
+				text-align: center;
+				&:first-child
+					margin-left 0
+				&:last-child
+					margin-right 0
+				&:before
+					// height 35px
+					// width 35px
+					// left 0
+					// top: 50%;
+					height: 45px;
+					width: 45px;
+					left: 50%;
+					top: 5px;
+					transform: translate(-50%, 0);
+		&.body
+			@media screen and (max-width 768px)
+				margin: 20px 0;
+				padding: 20px 10px 15px 10px;
+				background #1c294d
+			@media screen and (min-width 769px) and (max-width 1024px)
+				margin: 20px 0;
+				padding: 20px 10px 15px 10px;
+				background #1c294d
+			
+			padding: 7px;
+			.status-box
+				// &:first-child
+				// 	margin-left 0
+				// &:last-child
+				// 	margin-right 0
+				@media screen and (min-width 1025px) and (max-width 1280px)
+					.status__value
+						font-size 22px
+						margin-top 0
+					padding-left 0
+					&:before
+						display none
+					.status__title
+						display none
+					.status__value
+						text-align: center;
+
+				@media screen and (min-width 1281px)
+					.status__value
+						font-size 22px
+						margin-top 0
+					padding-left 0
+					&:before
+						display none
+					.status__title
+						display none
+					.status__value
+						text-align: center;
+				
+		
+		

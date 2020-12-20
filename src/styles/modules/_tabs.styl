@@ -1,0 +1,52 @@
+@import '_fonts'
+@import '_colors'
+
+
+.tabs
+	flex 1
+	display: flex;
+	margin auto 20px
+	justify-content: flex-end;
+	// @media screen and (max-width 1024px)
+	// 	.header__tab
+	// 		display none !important
+.header__tab
+	cursor pointer
+	margin auto 20px
+
+	font-family: Jura;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 100%;
+	text-align: center;
+	letter-spacing: 0.1em;
+
+	color: Ultralight-Blue;
+	z-index 1
+	&:hover
+		color: Cyan;
+	&.select
+		font-family: Jura;
+		font-style: normal;
+		// font-weight: bold;
+		text-shadow: 1px 0px 0px #45fff4;
+		font-size: 16px;
+		line-height: 100%;
+		text-align: center;
+		letter-spacing: 0.1em;
+
+		color: Cyan;
+		position relative
+		&:before
+			content "["
+			position: absolute;
+			left: -.7em;
+			top: 43%;
+			transform: translate(0, -50%);
+		&:after
+			content "]"
+			position: absolute;
+			right: -.7em;
+			top: 43%;
+			transform: translate(0, -50%);

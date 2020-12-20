@@ -1,0 +1,253 @@
+@import '_fonts'
+@import '_colors'
+
+
+
+.notification
+	background: Dark-Cyan
+	position relative
+	padding 15px 30px 15px 85px
+	&.exclamation
+		&:after
+			content ''
+			width 50px
+			height 100%
+			position absolute
+			background url('/assets/img/exclamation.svg')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			top: 0;
+			left: 20px;
+		@media screen and (max-width 769px)
+			padding 85px 10px 20px 10px
+			&:before
+				height 5px
+				width 100%
+			&:after
+				height 50px
+				width 100%
+				top 20px
+				left 0
+			.notification__text
+				text-align center
+		
+	&:before
+		content ''
+		width 5px
+		height 100%
+		position absolute
+		background: Cyan;
+		top: 0;
+		left: 0;
+	&:after
+		content ''
+		width 50px
+		height 100%
+		position absolute
+		background url('/assets/img/question-mark.svg')
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		top: 0;
+		left: 15px;
+	@media screen and (max-width 769px)
+		padding 85px 10px 20px 10px
+		&:before
+			height 5px
+			width 100%
+		&:after
+			height 50px
+			width 100%
+			top 20px
+			left 0
+		.notification__text
+			text-align center
+		
+.notification__text
+	font-family: Exo2;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 160%;
+	color: Ultralight-Blue
+	.hero-link
+		font-size: 16px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-width: 100%;
+		display: block;
+.notification__title
+	font-family: Jura;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 125%;
+	color: #45fff4;
+	text-shadow: 0 0 1px #1b1b1b;
+
+.provide-liquidity-box
+	background: Dark-Blue;
+	.input
+		max-height 44px
+		height 44px
+		input
+			max-height 44px
+			height 44px
+			padding-top 10px
+			padding-bottom 10px
+			font-size: 24px;
+
+
+
+.provide-liquidity__inputs-сontainer
+	.form__info
+		margin-top 30px
+		@media screen and (max-width 769px)
+			margin-top 15px
+			.form-info-box
+				margin: 15px 0 0 0 !important;
+			.form-info-box.with-arrow
+				min-height 30px
+					
+		.form-info-box
+			&:first-child, &:last-child
+				flex 2
+		@media screen and (min-width 769px) and (max-width 1024px)
+			flex-direction: row;
+			.text
+				font-size 14px
+			.form-info-box
+				margin 0 10px !important
+				&:first-child
+					margin 0 10px 0 0
+				&:last-child
+					margin 0 0 0 10px
+
+
+.form-info-box.with-arrow
+	display flex
+	min-height: 8px;
+.provide-liquidity__arrow
+	height 1px 
+	margin auto 1px auto 0
+	background #DEFEFE
+	position relative
+	flex 1
+	&:after
+		content ''
+		position absolute
+		height 8px
+		width 6px
+		// top -50%
+		right: -2px;
+		background url('/assets/img/arrow-mini.svg')
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		transform: translate(0, -50%);
+	&.mobile-rotate
+		@media screen and (max-width 769px)
+			height: 30px;
+			width: 1px;
+			max-width: 1px;
+			margin: 0 auto;
+			display: block;
+			&:after
+				right: 1px;
+				bottom: -2px;
+				transform: rotate(90deg) translate(0%, -50%);
+	&.reversed
+		transform: rotateZ(180deg);
+	&.two
+		&:before
+			content ''
+			position absolute
+			height 8px
+			width 6px
+			// top -50%
+			left: -2px;
+			background url('/assets/img/arrow-mini.svg')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			transform: translate(0, -50%) rotate(180deg);
+			@media screen and (max-width 769px)
+				left: -3px;
+				top: 3px;
+				transform: translate(0, -50%) rotate(270deg);
+	
+
+.provide-liquidity__inputs-сontainer
+	padding 30px 40px
+.provide-liquidity__submit-container
+	padding 25px 40px
+	background: Blue;
+	.text
+		font-family: Exo2;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 160%;
+		text-align: center;
+
+		color: #DEFEFE;
+	.button
+		width 100%
+		margin 20px 0
+.submit-container-text
+	display flex
+	.to-b-text__text
+		padding-left 28px
+		margin: auto
+		&:before
+			height 18px
+			width 18px
+			left 0
+			top: 0;
+			transform: translate(0, 2px);
+		@media screen and (max-width 1024px)
+			text-align center
+		@media screen and (max-width 768px)
+			padding-left 0
+			&:before
+				display none
+
+.provide-liquidity__stats-сontainer
+	padding 0 40px
+	min-height 140px
+	display flex
+	.form__info
+		flex 1
+		.form-info-box
+			margin 0 !important
+			padding 0 10px
+			border-right 1px solid Blue;
+			
+			display: flex;
+			flex-direction: column;
+			justify-content: end;
+			&:first-child
+				padding 0 10px 0 0
+			&:last-child
+				padding 0 0 0 10px
+				border-right none
+			@media screen and (max-width 769px)
+				border-right 0
+				padding 0
+				border-bottom 1px solid Blue;
+				min-height 100px
+				&:last-child
+					border-bottom none
+				.status__value
+					margin 20px 0 5px 0
+		.status__value
+			margin 40px 0 5px 0
+		.text, .status__value
+			text-align center
+		
+		
+		@media screen and (min-width 769px) and (max-width 1024px)
+			flex-direction row
+		

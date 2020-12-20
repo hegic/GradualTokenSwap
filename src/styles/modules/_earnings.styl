@@ -1,0 +1,240 @@
+@import '_fonts'
+@import '_colors'
+
+.section.earnings
+	.dai-pool-box
+		margin-top 20px
+// 		.dai-pool-box__availible
+// 			.dai-pool-box__val
+// 				text-align left
+
+.earnings-box
+	display flex
+	background: Dark-Blue;
+	@media screen and (max-width 769px)
+		flex-direction column
+		.earnings__diagram-and-info
+			flex-direction column
+		.earnings-dynamics__schedule
+			background: Blue;
+			border: 1px solid Bright-Blue;
+		.schedule-empty
+			padding 30px 0
+			&:before
+				display none
+			table
+				display none
+			.schedule-empty__info
+				border none !important
+				padding 0 !important
+
+				font-family: Exo2;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 12px;
+				line-height: 160%;
+
+				color: Ultralight-Blue;
+
+	@media screen and (min-width 769px) and (max-width 1024px)
+		flex-direction column
+		// .earnings__diagram-and-info
+		// 	padding-right 20px
+	
+
+.earnings__info, .earnings__diagram
+	.button
+		width 100%
+
+.earnings__diagram
+	position relative
+	background: Blue;
+	padding 45px 30px
+	display: flex;
+	flex-direction: column;
+	justify-content: center
+	@media screen and (max-width 769px)
+		padding 30px 40px
+		.diagram__text
+			top 95px	
+	.pie
+		width 205px
+		height 205px
+		margin 0 auto
+
+.diagram__text
+	position: absolute;
+	top: 112px;
+	left: 50%;
+	transform: translate(-50%, 0);
+
+.diagram-text__title
+	font-family: Exo2;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 150%;
+	align-items: center;
+	text-align: center;
+
+	color: Ultralight-Blue;
+	margin-bottom 5px
+.diagram-text__val
+	font-family: Jura;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 100%;
+	text-align: center;
+
+	color: Ultralight-Blue;
+	margin-bottom 5px
+.diagram-text__s
+	font-family: Jura;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 100%;
+	text-align: center;
+	color white
+	// &.good
+	// &.bad
+
+.diagram__data
+	margin 20px 0
+.diagram-data
+	font-family: Exo2;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 100%;
+	color: Ultralight-Blue;
+	padding-left 20px
+	margin: 0 0 10px 0;
+	height 15px
+	position relative
+	&:last-child
+		margin 0
+	&:before
+		content ''
+		position absolute
+		left 0
+		height 15px
+		width 15px
+		border-radius 5px
+	&.lp
+		&:before
+			background Juicy-Blue
+	&.nlp
+		&:before
+			background Cyan
+	&.bad
+		&:before		
+			background Warning-Red
+		
+
+
+.earnings__dynamics
+	flex 1
+
+.earnings__diagram-and-info
+	display flex
+	&.fix-staking
+		flex 2
+
+.earnings__info
+	padding 20px 0
+	.new-option__schedule-info
+		padding 20px 30px
+		margin-bottom 10px
+		flex auto
+		&:last-child
+			margin-bottom 0
+		&.lp
+			.button
+				margin-top 20px
+		&.nlp
+			.button
+				margin 20px 0 15px 0
+	.earnings-info__d-text
+		font-family: Exo2;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 160%;
+		text-align: center;
+
+		color: Ultralight-Blue;
+
+
+.earnings__dynamics
+	padding 20px 30px
+	display: flex;
+	flex-direction: column;
+
+
+.earnings-dynamics__schedule
+	flex 1
+	// background url('/assets/img/schedule-empty.svg')
+	// background-size: contain;
+	// background-repeat: no-repeat;
+	// background-position: center;
+	margin-top 15px
+	background Blue
+	padding 35px
+	// padding 25px 20px
+	// padding 35px 35px 50px 70px
+	display flex
+	.schedule-empty
+		flex 1
+		position relative
+		&:before
+			content ''
+			position absolute
+			height 20%
+			width 100%
+			background url('/assets/img/schedule-empty.svg')
+			background-size: contain;
+			background-repeat: repeat-x;
+			background-position: center;
+			filter: blur(5px);
+			top 20%
+		table
+			height: 100%;
+			width: 100%;
+			border: 1px solid Muted-Blue;
+			border-collapse: collapse;
+			filter: blur(5px);
+		.schedule-empty__info
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			padding 12px 42px
+			white-space: nowrap;
+
+			font-family: Jura;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 12px;
+			line-height: 160%;
+			text-align: center;
+			text-transform: uppercase;
+			color: Cyan;
+			
+			border-style: solid;
+			border-image-width: 20px;
+			border-image-source: url("/assets/img/schedule-empty--info-border.svg");
+			border-image-slice: 20;
+			border-image-repeat: stretch;
+			
+			
+
+	
+	
+.earnings-dynamics__table
+	display flex
+	flex 1
+	margin-top 15px
+	
+	max-height: 350px;

@@ -1,0 +1,102 @@
+@import '_fonts'
+@import '_colors'
+
+
+//section--dai-pool
+.dai-pool
+	.radio
+		margin-bottom 25px
+	.text
+		font-family: Exo2;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 100%;
+		color: #DEFEFE;
+		&.exp
+			margin 25px 0 15px 0
+			@media screen and (max-width 768px)
+				text-align center
+				line-height: 160%;
+			
+	.table-options__tr-vals
+		height 45px
+.dai-pool-box
+	background: #19264C;
+	border: 1px solid #2E5584;
+	box-sizing: border-box;
+	padding 25px 20px
+	&.summary
+		border-bottom 0
+	.dai-pool-box__availible
+		.dai-pool-box__val
+			text-align left
+	.dai-pool-box__rate
+		.dai-pool-box__val, .text
+			text-align right
+	@media screen and (max-width 768px)
+		.dai-pool-box__availible
+			.dai-pool-box__val
+				text-align center
+		.dai-pool-box__rate
+			.dai-pool-box__val, .text
+				text-align center
+		.dai-pool-box__vals
+			flex-direction column
+		.dai-pool-box__val, .text
+			text-align center
+		.dai-pool-box__val
+			font-size: 16px;
+			
+.dai-pool-box__vals
+	display flex
+	justify-content: space-between;
+	.dai-pool-box__val, .dai-pool-box__rate .text
+		white-space: nowrap;
+.dai-pool-box__val
+	font-family: Jura;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 100%;
+	text-align: right;
+	color: #DEFEFE;
+	margin-top 10px
+	span
+		color Cyan
+
+.dai-pool__table
+	max-height: 500px;
+.dai-pool-box__percent
+	margin-top 15px
+	height: 25px;
+	background: #16697E;
+	position relative
+	overflow hidden
+	&.mobile
+		display none
+	@media screen and (max-width 768px)
+		display none
+		&.mobile
+			display flex
+			margin-bottom 15px
+.d-p-b-percent__val
+	width 0%
+	height 100%
+	background Cyan
+	transition: width 2s;
+
+// .section.dai-pool
+// 	.dai-pool-box__percent
+// 		&:after
+// 			content ''
+// 			position absolute
+// 			width 20%
+// 			left 0
+// 			top: 0;
+// 			height 100%
+// 			background url('/assets/img/red-line.svg')
+// 			background-size: contain;
+// 			background-repeat: repeat-x;
+// 			background-position: right;
+// 			// border-right 2px solid #19264c

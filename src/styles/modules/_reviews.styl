@@ -1,0 +1,147 @@
+@import '_fonts'
+@import '_colors'
+
+
+//section--reviews
+.reviews-box
+	display flex
+	@media screen and (max-width 1024px)
+		flex-direction column
+		.review-box
+			margin 20px 0 0 0
+			&:first-child
+				margin 0
+.review-box
+	display flex
+	flex-direction: column;
+	position relative
+	margin 0 10px
+	flex 1
+	&:before
+		left 0
+		border-top: 6px solid Cyan;
+		border-right: 6px solid transparent;
+		z-index 1
+	&:after
+		right 0
+		border-top: 6px solid Cyan;
+		border-left: 6px solid transparent;
+	&:first-child
+		margin-left 0
+	&:last-child
+		margin-right 0
+.review__text
+	flex 1
+	background: #105367;
+	border: 1px solid Cyan;
+	box-sizing: border-box;
+	box-shadow: 0px 0px 2px #0291CE;
+	padding 25px 20px
+	box-sizing: border-box;
+	position relative
+
+	font-family: Exo2;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 160%;
+	text-align center
+
+	color: Ultralight-Blue;
+	display flex
+	flex-direction: column;
+	&:before
+		left -1px
+		bottom -1px
+		border-bottom: 6px solid Cyan;
+		border-right: 6px solid transparent;
+	&:after
+		right -1px
+		bottom -1px
+		border-bottom: 6px solid Cyan;
+		border-left: 6px solid transparent;
+	>p
+		margin 0
+		
+
+.review-box:before,
+.review-box:after,
+.review__text:before,
+.review__text:after
+	content: ''
+	display: block;
+	position: absolute;
+
+
+.review__user
+	margin-top 15px
+	padding-left 55px
+	position relative
+	&:before
+		content ''
+		height 40px
+		width 40px
+		position absolute
+		
+		left 0
+		background: #19284C;
+		box-shadow: 0px 0px 5px #0D1426;
+		border-radius: 5px;
+	&.user-1
+		&:before
+			background url('/assets/img/users/user-1.jpg')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+	&.user-2
+		&:before
+			background url('/assets/img/users/user-2.jpg')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+	&.user-3
+		&:before
+			background url('/assets/img/users/user-3.jpg')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+	&.user-4
+		&:before
+			background url('/assets/img/users/user-4.jpg')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+	&.delegate-developer-icon.zlot-finance
+		&:before
+			background url('/assets/img/users/delegate-developer--zlot.jpg')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+	&.delegate-developer-icon.jmonteer
+		&:before
+			background url('/assets/img/users/delegate-developer--jmonteer.jpg')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+
+.review__user--name
+	font-family: Jura;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 125%;
+	color: #FFFFFF;
+	text-transform: uppercase;
+
+.review__user--link
+	font-family: Exo2;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 125%;
+
+	color: Cyan;
+	
+	cursor pointer
+	text-decoration none
+
