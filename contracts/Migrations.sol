@@ -23,13 +23,13 @@ contract Migrations {
 }
 
 contract HEGIC is ERC20("HEGIC", "HEGIC") {
-  constructor() {
-    _mint(msg.sender, 100_000e18);
+  constructor(uint supply) {
+    _mint(msg.sender, supply);
   }
 }
 
 contract rHEGIC is ERC20("rHEGIC", "rHEGIC") {
-  constructor() {
-    _mint(msg.sender, 100_000e18);
+  constructor(uint supply) {
+    _mint(msg.sender, supply);
   }
 }

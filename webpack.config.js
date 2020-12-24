@@ -12,11 +12,12 @@ const cssLoader = {
 }
 
 module.exports = {
-    mode: 'development',
+    mode: process.env.WEBPACK_DEV_SERVER ? "development" : "production",
     resolve:{
       alias: {
-        styles: path.resolve(__dirname,'src', 'styles'),
-        assets: path.resolve(__dirname,'assets'),
+        utils: path.resolve(__dirname,'front', 'utils'),
+        styles: path.resolve(__dirname,'front', 'styles'),
+        assets: path.resolve(__dirname, 'assets'),
         build: path.resolve(__dirname,'build'),
       }
     },
@@ -40,11 +41,7 @@ module.exports = {
             cssLoader,
             {
               loader: 'stylus-loader',
-              options:{
-                stylusOptions: {
-
-                }
-              },
+              options:{ stylusOptions: {} },
             }
           ]
         },
@@ -55,27 +52,40 @@ module.exports = {
         {
           test: /\.(png|svg|jpg|gif|jpeg)$/,
           use: [
-            'file-loader',
+            {
+              loader: 'file-loader',
+              options: {
+                // name: "[name].[ext]",
+                outputPath: "assets/img",
+                // useRelativePath: true,
+              }
+            },
           ],
         },
         {
           test: /\.(woff|woff2|eot|ttf|otf)$/,
           use: [
-            'file-loader',
+            {
+              loader: 'file-loader',
+              options: {
+                // name: "[name].[ext]",
+                outputPath: "assets/fonts",
+                // useRelativePath: true,
+              }
+            },
           ],
         },
       ]
     },
     devServer: {
         historyApiFallback: true,
-        contentBase: path.resolve(__dirname, './dist'),
         open: true,
         compress: true,
         hot: true,
         port: 8080,
     },
     entry: {
-        main: path.resolve(__dirname, './src/index.js'),
+        gradualTokenSwap: path.resolve(__dirname, './front/index.js'),
     },
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -83,11 +93,10 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Hegic token swap',
+            title: 'Hegic Token Swap',
             filename: 'index.html',
         }),
-        new FaviconsWebpackPlugin('assets/logo.png'),
-        // new webpack.HotModuleReplacementPlugin(),
+        new FaviconsWebpackPlugin( 'assets/logo.png'),
         new VueLoaderPlugin(),
 	      new webpack.DefinePlugin({
 		      __VUE_OPTIONS_API__:   JSON.stringify(true),
