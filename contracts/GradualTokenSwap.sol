@@ -51,7 +51,7 @@ contract GradualTokenSwap is ERC20Recovery {
      */
     function withdraw() external {
         uint amount = available(msg.sender);
-        require(amount > 0, "GTS: You are have not unlocked tokens yet");
+        require(amount > 0, "GTS: You have not unlocked tokens yet");
         released[msg.sender] = released[msg.sender].add(amount);
         HEGIC.safeTransfer(msg.sender, amount);
         emit Withdrawn(msg.sender, amount);
