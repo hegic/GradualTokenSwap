@@ -1,0 +1,116 @@
+@import '_fonts'
+@import '_colors'
+
+.use-cases-box
+	display flex
+	@media screen and (max-width 768px)
+		flex-direction: column;
+		.use-case-box
+			background none
+			padding-top 167px
+			margin 0 0 20px 0 !important
+			&:last-child
+				margin 0 !important
+			&:before
+				height 147px
+				width 220px
+			.use-case__text
+				font-size: 12px;
+
+			
+	
+	@media screen and (min-width 769px) and (max-width 1024px)
+		flex-direction: column;
+		.use-case-box
+			background none
+			padding 10px 0 10px 240px
+			min-height 147px
+			display: flex;
+			flex-direction: column;			
+			.use-case__header, .use-case__title, .use-case__text
+				text-align left
+			&:before
+				left 0
+				transform: translate(0, 0);
+				height 147px
+				width 220px
+
+.use-case-box
+	flex 1
+	position relative
+	padding-top 220px
+	background radial-gradient(50% 50% at 50% 50%, #1E2D53 0%, #121C36 100%);
+	margin 0 10px
+	&:first-child
+		margin 0 10px 0 0
+	&:last-child
+		margin 0 0 0 10px
+	
+
+	&:before
+		content ''
+		position absolute
+		height 200px
+		width 300px
+		left: 50%;
+		top 0
+		transform: translate(-50%, 0);
+		
+
+	&.holders
+		&:before
+			background url('/assets/img/holders.png')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+	&.writers
+		&:before
+			background url('/assets/img/writers.png')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+	&.token-holders
+		&:before
+			background url('/assets/img/token-holders.png')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+	
+.use-case__header
+	font-family: Jura;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 125%;
+
+	align-items: center;
+	text-align: center;
+	text-transform: uppercase;
+
+	color: Cyan;
+	text-shadow: 0px 0px 2px Cyan;
+	
+	margin-bottom 15px
+
+.use-case__title
+	font-family: Exo2;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 160%;
+
+	text-align: center;
+
+	color: Ultralight-Blue
+
+	margin-bottom 10px
+	
+.use-case__text
+	font-family: Exo2;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 160%;
+	text-align: center;
+
+	color: Ultralight-Blue

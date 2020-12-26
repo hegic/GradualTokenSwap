@@ -1,0 +1,140 @@
+@import '_fonts'
+@import '_colors'
+
+.with-select
+	overflow visible
+.my-select
+	position relative
+	display flex
+	height: 46px;
+	flex-direction: column;
+	&.open
+		&:before
+			content ''
+			top 0
+			left 0
+			position: fixed;
+			height: 100%;
+			width: 100%;
+		&:after
+			transform: rotate(180deg);
+	&:after
+		content ''
+		position absolute
+		height 100%
+		width 10px
+		right 10px
+		background url('/assets/img/triangle.svg')
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+
+.my-select__selected
+	flex 1
+	display flex
+	background: linear-gradient(180deg, #203060 0%, #19264D 100%);
+	border: 1px solid Cyan;
+	box-sizing: border-box;
+	cursor pointer
+	padding 0 15px
+
+.my-select__vals
+	background: linear-gradient(180deg, #203060 0%, #19264D 100%);
+	border: 1px solid Cyan;
+	box-sizing: border-box;
+	// border-radius: 2px;
+	
+	position absolute
+	width: 100%;
+	bottom: -5px;
+	transform: translate(0, 100%);
+	z-index 10
+	padding 5px 0
+
+.my-select__val
+	height: 36px;
+	padding: 0 15px;
+	box-sizing: border-box;
+	display flex
+	
+	cursor pointer
+	&:hover
+		background: Dark-Blue;
+		.my-select-val__text
+			color: Cyan;
+
+.my-select-val__text
+	font-family: Exo2;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 100%;
+
+	color: #DEFEFE;
+
+	margin auto 0
+
+
+// .my-select
+// 	position relative
+// 	display flex
+// 	height: 36px;
+// 	// height: 46px;
+// 	flex-direction: column;
+// 	&.open
+// 		&:before
+// 			content ''
+// 			// position fixed
+// 			top 0
+// 			left 0
+// 			position: fixed;
+// 			height: 100%;
+// 			width: 100%;
+// 		// z-index 9
+
+// .my-select__selected
+// 	flex 1
+// 	display flex
+// 	background: linear-gradient(180deg, #203060 0%, #19264D 100%);
+// 	border: 1px solid #6680CC;
+// 	box-sizing: border-box;
+// 	border-radius: 2px;
+// 	cursor pointer
+// 	padding 10px 15px
+
+// .my-select__vals
+// 	background: linear-gradient(180deg, #203060 0%, #19264D 100%);
+// 	border: 1px solid #6680CC;
+// 	box-sizing: border-box;
+// 	border-radius: 2px;
+	
+// 	position absolute
+// 	width: 100%;
+// 	bottom: -5px;
+// 	transform: translate(0, 100%);
+// 	z-index 10
+// 	padding 5px 0
+
+// .my-select__val
+// 	height: 36px;
+// 	padding: 0 15px;
+// 	box-sizing: border-box;
+// 	display flex
+	
+// 	cursor pointer
+// 	&:hover
+// 		background: Dark-Blue;
+// 		.my-select-val__text
+// 			color: Cyan;
+
+// .my-select-val__text
+// 	font-family: Exo2;
+// 	font-style: normal;
+// 	font-weight: 500;
+// 	font-size: 16px;
+// 	line-height: 100%;
+
+// 	color: #DEFEFE;
+
+// 	margin auto 0
+

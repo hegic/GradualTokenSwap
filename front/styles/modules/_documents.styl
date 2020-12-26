@@ -1,0 +1,174 @@
+@import '_fonts'
+@import '_colors'
+
+
+
+.docs-and-join__box
+	.documents
+		@media screen and (max-width 1024px)
+			flex-direction column
+			.document
+				margin 20px 0 0 0
+				&:first-child
+					margin-left 0
+.documents
+	display flex
+	@media screen and (max-width 1024px)
+		flex-direction column
+		.document
+			margin-top 20px //0 0 0
+			&:first-child
+				margin-left 0
+	&.switch-pool
+		.document
+			&:hover
+				.document__title
+					.text
+						font-weight: normal;
+			min-height 130px
+			.switch-pool__header
+				font-family: Jura;
+				font-style: normal;
+				font-weight: bold;
+				font-size: 20px;
+				line-height: 150%;
+				/* identical to box height, or 30px */
+				text-transform: uppercase;
+
+				color: #45FFF4;
+
+				text-shadow: 0px 0px 2px rgba(69, 255, 244, 0.5);
+				margin-bottom 5px
+
+			.text
+				text-align: left;
+				margin: auto 0 auto 25px;
+				
+				font-family: Exo2;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 160%;
+				
+			
+			// @media screen and (max-width 768px)
+
+			// @media screen and (min-width 769px) and (max-width 1024px)
+
+			// @media screen and (min-width 1025px) and (max-width 1280px)
+
+			@media screen and (min-width 1281px)
+				max-width 480px
+			&.unselected
+				background: Green-Radial
+			
+.document
+	flex 1
+	background: #105367;
+	border: 1px solid Cyan;
+	box-sizing: border-box;
+	box-shadow: 0px 0px 2px #0291CE;
+	position relative
+	display flex
+	margin 0 20px
+	cursor pointer
+	z-index 1
+	min-height: 100px;
+	overflow hidden
+	&:hover
+		background: radial-gradient(50% 50% at 50% 50%, #07646E 52.6%, #0F5266 100%);
+		border: 1px solid Cyan;
+		box-sizing: border-box;
+		box-shadow: 0px 0px 10px Cyan;
+		.document__title
+			.text
+				font-weight: bold;
+	&:before
+		left 0
+		border-top: 6px solid Cyan;
+		border-right: 6px solid transparent;
+		z-index 1
+	&:after
+		right 0
+		border-top: 6px solid Cyan;
+		border-left: 6px solid transparent;
+	&:first-child
+		margin-left 0
+	&:last-child
+		margin-right 0
+.document-angles
+	position relative
+	flex 1
+	display flex
+	overflow hidden
+	&:before
+		left 0
+		bottom 0
+		border-bottom: 6px solid Cyan;
+		border-right: 6px solid transparent;
+	&:after
+		right 0
+		bottom 0
+		border-bottom: 6px solid Cyan;
+		border-left: 6px solid transparent;
+
+.document:before,
+.document:after,
+.document-angles:before,
+.document-angles:after
+	content: ''
+	display: block;
+	position: absolute;
+
+
+.document__title
+	padding-left 90px
+	display flex
+	flex 1
+	position relative
+	&:before
+		content ''
+		position absolute
+		height 100%
+		width 40px
+		background url('/assets/img/icon-doc.svg')
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		top: 0;
+		left: 25px;
+	&.eth
+		&:before
+			width 60px
+			background url('/assets/img/eth.svg')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+	&.dai
+		&:before
+			width 65px
+			background url('/assets/img/dai.svg')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+	&.wbtc
+		&:before
+			width 65px
+			background url('/assets/img/logo-WBTC-mini.svg')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+	.text
+		font-family: Exo2;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 150%;
+		text-align: center;
+
+		color: Ultralight-Blue;
+		
+		margin auto
+		white-space: nowrap;
+		padding-right: 25px;
+		

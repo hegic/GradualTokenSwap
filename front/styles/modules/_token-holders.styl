@@ -1,0 +1,659 @@
+.th-switch-titles
+	.hero-title, .hero-text
+		text-align center
+
+.token-hegic
+	position relative
+	&:after
+		content ''
+		position absolute
+		height 100%
+		// width 32px
+		width 36px
+		margin-left 2px
+		// background url('/assets/img/hegic-10.svg')
+		// background url("/assets/img/hegic-x-3.png")
+		background url("/assets/img/hegic.png")
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	&.x
+		&:after
+			margin-left -4px
+
+.th
+	.new-option__schedule-info nlp
+		padding 0 !important
+
+.hero-th-infos
+	display flex
+	margin-bottom: 30px;
+	@media screen and (max-width 768px)
+		flex-wrap: wrap;
+	@media screen and (min-width 769px) and (max-width 1024px)
+		flex-wrap: wrap;
+
+.hero-th-info
+	display flex
+	flex 1
+	flex-direction: column;
+	@media screen and (max-width 768px)
+		flex auto
+		width 50%
+	@media screen and (min-width 769px) and (max-width 1024px)
+		flex auto
+		width 50%
+.hero-th-info__val
+	text-align center
+.th-citadel
+	display flex
+	margin 7px auto
+	.text
+		font-size 18px
+		margin auto 10px
+	// .emoji
+	// 	margin-right 10px
+	@media screen and (max-width 768px)
+		justify-content: center;
+	.highlight
+		color Cyan
+.highlight-bold
+	font-weight 600
+	color Cyan
+.hero-th-hegicians-citadel
+	display flex
+	text-align center
+	padding: 15px 35px !important
+	@media screen and (max-width 768px)
+		flex-direction column;
+		.new-option__schedule-info.nlp
+			margin-right 0
+.citadel-box
+	display flex
+	flex-direction column
+	margin auto 20px
+.th-h-c__box
+	flex 1
+	// margin auto
+	.new-option__schedule-info
+		background #19274d
+	&.fix
+		display: flex;
+		flex-direction: column;
+		// margin: auto;
+		@media screen and (max-width 768px)
+			padding 0
+			.citadel-box
+				margin-top 15px
+			.th-citadel .text
+				font-size 14px !important
+.th-hero-you-are
+	font-size 42px
+	color Cyan
+	font-weight: bold;
+	margin auto 0
+	display flex
+	flex-direction row
+	justify-content: center;
+	.th-hero-you-are__text
+		margin auto 0
+	// .emoji
+	// 	font-size 64px
+	// 	display: inline-block;
+.th-hero-you-will
+	color Cyan
+	font-weight: bold;
+	margin-left 5px
+
+
+.earnings__info.th-h-c__box
+	display flex
+
+
+.switch-interact
+	.document
+		min-height 85px !important
+		@media screen and (max-width 768px)
+			min-height 50px !important
+			.document__title
+				padding 0 !important
+				// height: 50px;
+				// margin: auto;
+				// .text
+				// 	height 25px
+				// 	width 25px
+				// 	&:before
+				// 		background-size: 25px !important;
+				// .switch-pool__header
+				// 	display none
+			// &:hover
+			// 	.text
+			// 		&:before
+			// 			opacity 1 !important
+
+		@media screen and (min-width 769px) and (max-width 1024px)
+			.document__title
+				padding 0 !important
+				// height: 50px;
+				// margin: auto;
+				// .text
+				// 	height 45px
+				// 	width 45px
+				// 	&:before
+				// 		background-size: 45px !important;
+				// .switch-pool__header
+				// 	display none
+			// &:hover
+			// 	.text
+			// 		&:before
+			// 			opacity 1 !important
+		.text
+			margin auto !important
+			text-align center !important
+			padding-right: 0 !important
+		.document__title
+			padding-left 0 !important
+			.text
+				position relative
+				// &:before
+				// 	content ''
+				// 	position absolute
+				// 	height 100%
+				// 	width 100%
+				// 	background url("/assets/img/miners.svg")
+				// 	background-size: 45px;
+				// 	background-repeat: no-repeat;
+				// 	background-position: center;
+				// 	left: 0;
+			.switch-pool__header
+				font-size 14px !important
+				// opacity 0
+			&:before
+				display none
+		// &:hover
+		// 	.switch-pool__header
+		// 		opacity 1
+		.text
+			&:before
+				opacity 0
+
+
+
+.th
+	.form-periods
+		width: 280px;
+	.provide-liquidity__submit-container
+		display: flex;
+		padding: 0 20px 0 0;
+		background: #19274d;
+		// border-bottom: 1px solid #20305f;
+		// margin-bottom 20px
+		margin-top 20px
+		@media screen and (max-width 768px)
+			flex-direction column
+			padding 0
+			.earnings__dynamics
+				padding 20px 15px
+
+	.l-m-r-box
+		flex: 1;
+		display: flex;
+		.button
+			margin 20px 0 15px 0
+		@media screen and (max-width 768px)
+			flex-direction column
+			.new-option__schedule-info
+				&:last-child
+					margin 20px 0 0 0 !important
+	.l-m-r-box.earnings__info
+		.new-option__schedule-info
+			margin-bottom 0 !important
+			&:last-child
+				margin-left 20px
+	.claim-val
+		margin 15px auto
+		font-size: 38px;
+		color Cyan
+		text-shadow: 0 0 2px rgba(69,255,244,0.9);
+	.new-option__schedule-info
+		flex 1
+	.bold
+		font-weight 600
+	.liquidity-mining-rewards__stats-container
+		padding 0
+		.form-info-box
+			border-right none
+			background #19274d
+			height: 120px;
+			@media screen and (max-width 768px)
+				&:first-child
+					margin-top 0 !important
+		.status__value
+			margin 20px 0 5px 0
+		.text
+			line-height: 125%;
+		.text, .status__value
+			text-align center
+
+
+
+
+.th-ibco-hero-end
+	display flex
+	justify-content: center;
+	.hero-text
+		margin 7px !important
+	&.state-waiting
+		.hero-text
+			font-size 26px
+		.bold
+			color Cyan
+.th-ibco-hero-button-box
+	display flex
+	margin-top 20px
+	margin-bottom 30px
+	.button
+		margin auto
+.your-option__table.th
+	max-height: 355px;
+.th-info, .th-padding-0
+	padding-bottom 0
+
+.th-waiting-ibco
+	font-size 21.7px !important
+	@media screen and (max-width 768px)
+		font-size 12.5px !important
+
+.th-big
+	font-size: 72px !important
+	margin: 10px 0 !important
+	@media screen and (max-width 768px)
+		font-size: 42px !important
+		// margin-top 30px !important
+		// margin-bottom 30px !important
+
+
+
+.button.token-hegic
+	&:after
+		top 2px !important
+
+// .hero-content--connect.th
+// 	@media screen and (max-width 768px)
+// 		padding 0
+.with-radial-progress-bar
+	.min-radial-brogress-bar
+		margin 50px 0
+	@media screen and (max-width 768px)
+		flex-direction column
+		.min-radial-brogress-bar
+			margin 10px auto
+		.center-radial-brogress-bar
+			margin auto
+	@media screen and (min-width 769px) and (max-width 1024px)	
+		flex-direction column
+		.min-radial-brogress-bar
+			margin 10px auto
+		.center-radial-brogress-bar
+			margin auto
+.th .provide-liquidity__inputs-container
+	@media screen and (max-width 768px)
+		margin 20px 10px 25px 10px
+	.button
+		margin-left:20px
+		flex 8
+		width auto
+		height: 38px;
+		@media screen and (max-width 768px)
+			margin-top 20px
+			margin-left 0
+			margin-bottom 25px
+			flex 1
+			padding 8px
+			width 100%
+	.form__info.th-form
+		display flex
+	@media screen and (min-width 769px) and (max-width 1024px)	
+		padding 30px 0
+
+
+.th-timer
+	display flex
+	justify-content center
+	@media screen and (max-width 768px)
+		.th-timer__val
+			// font-size 18px
+			// padding 11px 0
+			// width 40px
+			font-size: 14px;
+			padding: 12px 0;
+			width: 35px;
+			margin 5px 10px
+			&:after
+				right: -12px !important
+		.th-timer__text
+			margin 10px 0 0px 0
+			font-size 9px
+	&.mini
+		.th-timer__val
+			// font-size 18px
+			// padding 11px 0
+			// width 40px
+			font-size: 14px;
+			padding: 7px 0;
+			width: 30px;
+			margin 5px 10px
+			&:after
+				right: -13px;
+		.th-timer__text
+			margin 10px 0 0px 0
+			font-size 9px
+.th-timer__blok
+	.th-timer__val
+		&:after
+			content: ":";
+			color: #45fff4;
+			top: 50%;
+			position: absolute;
+			right: -18px;
+			transform: translate(0, -50%);
+	&:last-child
+		.th-timer__val
+			&:after
+				content ""
+.th-timer__val
+	background: #45fff4;
+	padding: 20px 0;
+	margin: 5px 15px;
+	width: 65px;
+	text-align: center;
+	font-size: 30px;
+	font-family: Exo2;
+	font-style: normal;
+	font-weight: bold;
+	color: #19274d;
+	line-height: 100%;
+	box-sizing: border-box;
+	filter: drop-shadow(0px 0px 4px #45fff4);
+.th-timer__text
+	color: aliceblue;
+	text-align: center;
+	margin: 10px 0 15px 0;
+	font-family: Exo2;
+	font-style: normal;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size 14px
+	// color: #667fcc;
+	color: Cyan
+
+.th-hegic-ibco
+	text-align: center;
+	color: Cyan
+	text-transform: uppercase;
+	font-size: 16px;
+	font-family: Exo2;
+	font-style: normal;
+	font-weight: bold;
+	margin-top: 20px;
+
+.th-timer-block-active
+	display flex
+	justify-content flex-end
+	@media screen and (max-width 768px)
+		justify-content: center;
+		margin: 15px auto 30px auto;
+		.hero-text
+			text-align: center !important;
+			padding-left: 10px !important;
+
+	.th-ibco-hero-end
+		flex-direction: column;
+		.th-timer__text
+			color: #667fcb;
+		.hero-text
+			padding: 0;
+			margin: 0 !important;
+			text-align: center;
+			color: #667fcb;
+			text-transform: uppercase;
+			font-size: 12px;
+			font-family: Exo2;
+			font-style: normal;
+			font-weight: bold;
+.th
+	.input-box
+		max-width: 400px;
+		margin: auto;
+		background: linear-gradient(180deg, #182544 -14.77%, #182544 -14.76%, #1e2d55 54.37%, #182444 119.32%);
+	.provide-liquidity__inputs-container
+		@media screen and (max-width 768px)
+			padding 0 0 20px 0
+
+.th-circle__text
+	font-family: Jura;
+	font-weight: bold;
+	font-size: 28px;
+	color: #76fdf4;
+	padding: 0;
+	margin: 0;
+	line-height 30px
+	&.large
+		font-size: 40px;
+	&.additional
+		font-size: 14px
+		color #667fcb
+		font-family: Exo2;
+		font-style: normal;
+		font-weight: bold;
+		text-transform: uppercase;
+
+
+.tx-link
+	margin: 0 15px;
+	font-family: Exo2;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 145%;
+	color: #defefe;
+	cursor: pointer;
+	border-bottom: 1px dashed #defefe;
+
+
+.radial-progress-container
+	position relative
+
+.radial-progress-inner
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	position: absolute;
+	border-radius: 50%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+
+.th-form
+	display flex
+	box-sizing: border-box;
+	flex 1
+	position relative
+	margin 0 30px 0 0
+	padding 20px 30px 10px 30px
+	z-index 0
+	&:last-child
+		margin-right 0
+	&:before
+		z-index -1
+		content ''
+		position absolute
+		height: calc(100% - 2px);
+		width: calc(100% - 2px);
+		top: 1px;
+		left: 1px;
+		bottom: 1px;
+		right: 1px;
+		background  Dark-Blue;
+		clip-path: polygon(15px 0,100% 0,100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%,0 15px);
+	&:after
+		z-index -2
+		content ''
+		position absolute
+		height: 100%
+		width: 100%
+		top: 0px;
+		left: 0px;
+		bottom: 0px;
+		right: 0px;
+		background Cyan;
+		clip-path: polygon(15px 0,100% 0,100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%,0 15px);
+
+
+.th-text-for-you
+	display flex
+	flex-direction row
+	justify-content center
+	margin: 2px auto;
+	.emoji-box
+		margin: -4px 2px;
+
+
+.emoji-type
+	display flex
+	width 205px
+	font-size 120px
+	.emoji
+		margin auto
+
+.emoji-box
+	display flex
+	// flex 1
+.emoji-big
+	.emoji-icon
+		height 85px
+		width 85px
+.emoji-big-2
+	.emoji-icon
+		height 120px
+		width 120px
+.emoji-big-3
+	margin 20px auto 0 auto
+	.emoji-icon
+		height 155px
+		width 155px
+.emoji-icon
+	display: inline-block;
+	height 30px
+	width 30px
+	&.magic
+		background url("/assets/img/magic-wand-1.svg")
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	&.rabbi
+		background url("/assets/img/rabbit.svg")
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	&.elfo
+		background url("/assets/img/elf.svg")
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	&.fairy
+		background url("/assets/img/fairy.svg")
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	&.wiz
+		background url("/assets/img/wizard.svg")
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	&.genie
+		background url("/assets/img/magic-lamp.svg")
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	&.drago
+		background url("/assets/img/dragon.svg")
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+
+
+.fix-staking
+	.earnings__diagram
+		flex .5
+
+
+.switch-interact
+	.my-select
+		width 100%
+		br
+			display none
+
+
+.bonding-curve-box
+	@media screen and (max-width 768px)
+		.provide-liquidity__inputs-container
+			padding 20px 15px
+		.new-option__data
+			padding 20px 0
+		.provide-liquidity__submit-container
+			padding 0 15px 20px 15px
+.liquidity-mining-rewards
+	@media screen and (max-width 768px)
+		.earnings__info.new-option__schedule-infos
+			margin-left 0
+		.new-option__schedule-info.nlp
+			margin-right 0
+
+
+
+
+
+
+.delegate-developers
+	padding: 0 !important
+	min-width: auto;
+	.document__title
+		padding 0
+		&:before
+			display none
+		.text
+			padding 10px
+			font-size: 22px;
+	.delegate-developer-box
+		flex 1
+		&:first-child
+			margin-right 20px
+			@media screen  and (max-width 1024px)
+				margin-right 0
+	.docs-and-join__box:last-child
+		max-width 45%
+		.text
+			line-height: 150%;
+			@media screen and (max-width 768px)
+				margin-top 25px
+			@media screen and (min-width 769px) and (max-width 1024px)
+				margin-top 25px
+	.delegate-developer-info-box
+		display flex
+		// .delegate-developer-icon
+		// 	height 20px
+		// 	width 20px
+		// 	&.zlot-finance
+		// 		background url("/assets/img/users/delegate-developer--zlot.jpg")
+		// 		background-size: contain;
+		// 		background-repeat: no-repeat;
+		// 		background-position: center;
+		// 	&.jmonteer
+		// 		background url("/assets/img/users/delegate-developer--jmonteer.jpg")
+		// 		background-size: contain;
+		// 		background-repeat: no-repeat;
+		// 		background-position: center;
+		

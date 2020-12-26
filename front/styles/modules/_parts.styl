@@ -1,0 +1,539 @@
+@import '_fonts'
+@import '_colors'
+
+
+
+.table-options
+	border-collapse: collapse;
+	border: 1px solid Blue
+	width: 100%;
+.table-options__header
+	height 42px
+	background Blue
+	th
+		padding 5px
+		font-family: Exo2;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 100%;
+		color: #DEFEFE;
+		white-space: nowrap;
+		text-align: left;
+		&:first-child
+			padding-left 20px
+.table-options__tr-vals
+	height 60px
+	background Dark-Blue
+	border-bottom 1px solid #263B73;
+	td
+		padding 5px
+		font-family: Exo2;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 100%;
+		color: Ultralight-Blue
+		white-space: nowrap;
+		&:first-child
+			padding-left 20px
+	.null
+		text-align: center;
+		color #667fcc
+
+.tr-vals__text
+	padding-top 5px
+	&.big
+		font-size 14px
+	&:first-child
+		padding-top 0
+	&.good
+		color Cyan
+	&.bad
+		color Warning-Red
+	&.additional
+		color Accent-Blue
+.tr-vals__box
+	display flex
+	.tr-vals__text
+		padding-top 0
+		&:first-child
+			position relative
+			padding-right 25px
+			&:after
+				content ''
+				height 100%
+				width 15px
+				position absolute
+				background url('/assets/img/arrow.svg')
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				right: 5px;
+
+
+
+
+
+
+
+.category-title
+	font-family: Jura;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 100%;
+	display: flex;
+	align-items: center;
+
+	color: #FFFFFF;
+
+	text-shadow: 0px 0px 1px #1B1B1B;
+	padding-left 66px
+	position relative
+	margin 60px auto 35px 0
+	text-transform: uppercase;
+
+	&.nowrap
+		white-space: nowrap;
+
+
+	&:before
+		content ''
+		position absolute
+		width 51px
+		height 28px
+		background url('/assets/img/cat-icon.svg')
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		left 0
+	@media screen and (max-width 1024px)
+		padding-left 22px
+		&:before
+			width  12px
+			height 100%
+			background url('/assets/img/cat-icon--mobile.svg')
+			background-size: auto;
+			background-repeat: repeat-y;
+			background-position: center;
+	&.mobile
+		padding-left 22px
+		margin 0
+		&:before
+			width  12px
+			height 100%
+			background url('/assets/img/cat-icon--mobile.svg')
+			background-size: auto;
+			background-repeat: repeat-y;
+			background-position: center;
+.text
+	font-family: Exo2;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 100%;
+
+	color: Ultralight-Blue;
+	.bold
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 160%;
+
+
+
+
+
+.radio
+	display flex
+	height 44px
+	border: 1px solid Cyan;
+	box-sizing: border-box;
+	// &.connected
+	// 	height 36px
+	// 	max-width 250px
+	// 	padding 5px
+	// 	border-radius 2px
+	// 	border: 1px solid Accent-Blue;
+	// 	background Dark-Blue
+	// 	.radio__text
+	// 		color Accent-Blue
+	// 	.radio__value
+	// 		border-radius 2px
+
+.radio__value
+	flex 1
+	display flex
+	cursor pointer
+	&.select
+		background Cyan;
+		.radio__text
+			color: #1C2A4F;
+	&:hover
+		.radio__text
+			text-shadow: 0px 0px 15px #45fff4;
+.radio__text
+	font-family: Jura;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 100%;
+
+	color: Cyan;
+
+	margin auto
+	text-transform: uppercase;
+
+
+
+button.swap
+	border: 1px solid Cyan;
+	box-sizing: border-box;
+	border-radius: 2px;
+
+	font-family: Jura;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 100%;
+	text-align: center;
+
+	color: Cyan;
+
+	background none
+	cursor pointer
+	outline none
+	padding 5px 10px
+	white-space: nowrap;
+	&:hover
+		background Cyan
+		color Dark-Blue
+	&:disabled
+		opacity .5
+		&:hover
+			background none
+			color: Cyan;
+a.tweet
+	background: #00ACEE;
+	// border: 1px solid #00ACEE;
+	box-sizing: border-box;
+	border-radius: 2px;
+
+	font-family: Jura;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 100%;
+	text-align: center;
+
+	color: #FFFFFF;
+	padding 5px 5px 5px 20px
+	position relative
+	outline none
+	cursor pointer
+	&:before
+		content ''
+		height 100%
+		width 10px
+		position absolute
+		background url('/assets/img/tweet.svg')
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		top: 0;
+		left: 5px;
+	&:hover
+		box-shadow 0px 0px 4px 0px #00ACEE
+
+
+
+.button
+	cursor pointer
+	outline none
+	margin auto 0
+
+	font-family: Jura;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 100%;
+	text-align: center;
+	letter-spacing: 0.1em;
+
+	height 46px
+	width 265px
+	// height 65px
+	// width 297px
+	z-index 1
+
+	&.primary
+		color: #15203D;
+
+		background transparent
+		border: 1px solid Cyan;
+		box-sizing: border-box;
+		border-radius: 2px;
+
+		border: none;
+
+		border-style: solid;
+		border-image-width: 50px;
+		border-image-source: url("/assets/img/button-primary.svg");
+		border-image-slice: 20;
+		border-image-repeat: stretch;
+		&:hover
+			filter: drop-shadow(0 0 10px Cyan);
+
+		&.blue
+			color Ultralight-Blue;
+			border-style: solid;
+			border-image-width: 50px;
+			border-image-source: url("/assets/img/button-primary--juicy-blue.svg");
+			border-image-slice: 20;
+			border-image-repeat: stretch;
+			&:hover
+				filter: drop-shadow(0 0 10px Juicy-Blue);
+		&:disabled
+			border-style: solid;
+			border-image-width: 50px;
+			border-image-source: url("/assets/img/button-primary--disabled.svg");
+			border-image-slice: 20;
+			border-image-repeat: stretch;
+			&:hover
+				filter: none
+
+
+	&.secondary
+		color: Cyan;
+
+		background transparent
+		border: 1px solid Cyan;
+		box-sizing: border-box;
+		border-radius: 2px;
+
+		border: none;
+
+		border-style: solid;
+		border-image-width: 50px;
+		border-image-source: url("/assets/img/button-secondary.svg");
+		border-image-slice: 20;
+		border-image-repeat: stretch;
+		&:hover
+			filter: drop-shadow(0 0 10px Cyan);
+		&.yellow
+			color Warning-Yellow;
+			border-style: solid;
+			border-image-width: 50px;
+			border-image-source: url("/assets/img/button-secondary-yellow.svg");
+			border-image-slice: 20;
+			border-image-repeat: stretch;
+			&:hover
+				filter: drop-shadow(0 0 10px Warning-Yellow);
+
+
+
+
+.input
+	position relative
+	&.with-max
+		flex-direction column
+		margin-bottom 22px
+		.input__max
+			font-family: Exo2;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 100%;
+			text-align: center;
+			color: Ultralight-Blue
+			position absolute
+			bottom: -10px;
+			transform: translate(0, 100%);
+			&.bad
+				color: Warning-Red
+	&.connected
+		display flex
+		input
+			min-height: 36px;
+			max-height: 36px;
+			height: 36px;
+			flex 1
+			outline none
+			padding 10px 45px 10px 15px
+
+			font-family: Exo2;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 100%;
+
+			color: #FFFFFF;
+
+
+			min-width 20px
+			background: Dark-Blue
+			border: 1px solid Accent-Blue
+			box-sizing: border-box;
+			box-shadow: inset 0px 0px 10px #0D1326;
+			border-radius: 2px;
+			&:active, &:focus
+				border: 1px solid Cyan
+
+			text-overflow: ellipsis;
+
+			&:placeholder
+				color: #667FCC;
+			&::-webkit-input-placeholder
+				color: #667FCC;
+			&:-moz-placeholder
+				color: #667FCC;
+			&::-moz-placeholder
+				color: #667FCC;
+			&:-ms-input-placeholder
+				color: #667FCC;
+
+		&[data-type]
+			&:after
+				content attr(data-type)
+				position absolute
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+				right: 10px
+
+				font-family: Exo2;
+				font-style: normal;
+				font-weight: bold;
+				font-size: 14px;
+				line-height: 100%;
+				text-align: right;
+
+				color: #667FCC;
+				top: 50%;
+				transform: translate(0, -50%);
+				// text-transform: uppercase;
+	&.big-padding
+		input
+			padding 10px 75px 10px 15px
+
+
+
+
+.input-box
+	display flex
+	flex-direction row
+	height 44px
+	border: 1px solid Cyan;
+	input
+		min-width 20px
+		width 100%
+		flex 1
+		outline none
+		padding 10px 15px
+		text-align right
+
+		font-family: Jura;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 100%;
+
+		color: #FFFFFF;
+
+		background: linear-gradient(180deg, #182544 -14.77%, #182544 -14.76%, #1E2D55 54.37%, #182444 119.32%);
+		box-sizing: border-box;
+		border none
+		border-right: 1px solid Cyan;
+
+		text-overflow: ellipsis;
+
+		&:placeholder
+			color: #0e5668;
+			text-align right
+		&::-webkit-input-placeholder
+			color: #0e5668;
+			text-align right
+		&:-moz-placeholder
+			color: #0e5668;
+			text-align right
+		&::-moz-placeholder
+			color: #0e5668;
+			text-align right
+		&:-ms-input-placeholder
+			color: #0e5668;
+			text-align right
+
+	.input-box__type
+		padding 0 15px
+		font-family: Jura;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 100%;
+		color: Cyan;
+
+		text-transform: uppercase;
+		margin auto 0
+		&[data-type="eth"]
+			padding-left 32px
+			position relative
+			&:before
+				content ''
+				position absolute
+				background url('/assets/img/eth.svg')
+				height 100%
+				width 12px
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+				margin-left: -17px;
+
+.good
+	color Cyan
+.bad
+	color Warning-Red
+
+
+
+input[type="checkbox"]
+	position: relative;
+	width: 20px;
+	height: 20px;
+	color: Cyan
+	border: 1px solid Cyan;
+	// border-radius: 4px;
+	appearance: none;
+	outline: 0;
+	cursor: pointer;
+	transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
+	margin-right 10px
+	top: 4px;
+	&::before
+		position: absolute;
+		content: '';
+		top: -1px;
+		left: 7px;
+		width: 5px;
+		height: 14px;
+		border-style: solid;
+		border-width: 0 2px 2px 0;
+		transform: rotate(45deg);
+		opacity: 0;
+		display none
+	&:checked
+		filter: drop-shadow(0 0 1px Cyan);
+		&:before
+			display: block;
+			// color: white;
+			// // border-color: $green;
+			// // background: $green;
+	&::before 
+		opacity: 1
+		
+.hover
+	cursor pointer
+
+
+
+.emoji
+	font-family Emoji

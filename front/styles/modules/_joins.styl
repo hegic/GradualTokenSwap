@@ -1,0 +1,124 @@
+@import '_fonts'
+@import '_colors'
+
+
+.joins
+	display flex
+	justify-content: space-between;
+	margin-top: 50px;
+	@media screen and (max-width 350px)
+		overflow: auto;
+	
+.join
+	display flex
+	padding 0 8px
+	// padding 0 10px
+	cursor pointer
+	flex-direction: column;
+	z-index 1
+	&:first-child
+		padding-left 0
+	&:last-child
+		padding-right 0
+	@media screen and (max-width 768px)
+		cursor default
+		.join__text
+			font-size 10px
+	&:hover
+		.join__text
+			font-weight: bold;
+			color: Cyan;
+		.join__icon
+			filter: drop-shadow(0 0 7px Cyan);
+				
+
+.join__icon
+	// height 65px
+	// width 65px
+	
+	height 44px
+	width 44px
+	
+	background url('/assets/img/square.svg')
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	
+	box-sizing: border-box;
+	position relative
+	@media screen and (max-width 768px)
+		height 40px
+		width 40px
+	&:after
+		content ''
+		height 100%
+		position absolute
+		left: 50%;
+		transform: translate(-50%, 0);
+	&.twitter
+		&:after
+			background url('/assets/img/twitter.svg')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			width 24px
+			@media screen and (max-width 1024px)
+				width 23px
+	&.telegram
+		&:after
+			background url('/assets/img/telegram.svg')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			width 24px
+			@media screen and (max-width 1024px)
+				width 23px
+	&.discord
+		&:after
+			background url('/assets/img/discord.svg')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			width 28px
+			@media screen and (max-width 1024px)
+				width 29px
+	&.git-hub
+		&:after
+			background url('/assets/img/git-hub.svg')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			width 24px
+			@media screen and (max-width 1024px)
+				width 23px
+	&.medium
+		&:after
+			background url('/assets/img/medium2.svg')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			width 28px
+			@media screen and (max-width 1024px)
+				width 24px
+	&.defipulse
+		&:after
+			background url('/assets/img/defipulse-min.svg')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			width 20px
+			@media screen and (max-width 1024px)
+				width 19px
+		
+
+.join__text
+	font-family: Exo2;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 100%;
+	text-align: center;
+
+	color: Ultralight-Blue;
+	
+	margin-top 10px

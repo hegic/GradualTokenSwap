@@ -1,0 +1,471 @@
+@import '_fonts'
+@import '_colors'
+
+
+.hero-warning
+	// background: Global-Dark
+	@media screen and (max-width 768px)
+		padding 0 20px 0 20px
+	@media screen and (min-width 769px) and (max-width 1024px)
+		padding 0 30px 0 30px
+	@media screen and (min-width 1025px) and (max-width 1280px)
+		padding 0 30px 0 30px
+	@media screen and (min-width 1281px)
+		margin: auto;
+		padding 0
+		max-width: 1120px;
+		width 1120px
+		margin: 0 auto;
+	.text
+		margin 10px 0
+		position relative
+		padding-left 50px
+		text-align: justify;
+
+		font-family: Exo2;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 160%;
+		
+		color Warning-Yellow
+		&:before
+			content ''
+			position absolute
+			left 0
+			width: 30px;
+			height: 100%;
+			background url('/assets/img/error.svg')
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			// @media screen and (max-width 768px)
+			// 	width: 20px;
+			// 	height: 100%;
+
+
+
+.hero-content
+	display flex
+	position relative
+
+.hero-content-box
+	z-index 1
+	margin: auto 275px auto 0;
+	flex 1		
+	@media screen and (max-width 768px)
+		margin 40px 0 0 0
+	@media screen and (min-width 769px) and (max-width 1024px)
+		margin 60px 0 0 0
+	@media screen and (min-width 769px) and (max-width 1024px)
+		.hero-connect-box
+			justify-content: center;
+		.hero-title, .hero-text
+			text-align center
+		.to-b-text
+			padding 0
+			&:before, &:after
+				display none
+		.to-b-text__text
+			margin: auto;
+			text-align: center;
+			&:before
+				display none
+	@media screen and (min-width 1281px)
+		padding 0
+		width: 1120px;
+		max-width: 1120px;
+		margin: auto;
+		position: relative;
+		.cryo
+			right 0 !important
+.hero-title
+	font-family: Jura;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 46px;
+	line-height: 125%;
+	text-transform: uppercase;
+
+	color: Cyan;
+
+	text-shadow: 0px 0px 1px #1B1B1B;
+	
+	@media screen and (max-width 768px)
+		font-size 28px
+
+
+.hero-text
+	font-family: Exo2;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 150%;
+
+	color: Ultralight-Blue;
+	
+	margin 30px 0
+
+.hero-connect-box
+	display flex
+	@media screen and (max-width 768px)
+		flex-direction column
+		.button
+			width: 100%
+
+.hero-status
+	display: flex;
+	flex-direction: column;
+	margin-left 30px
+	justify-content: center;
+	@media screen and (max-width 768px)
+		margin 15px 0 0 0
+
+.hero-status--title
+	font-family: Jura;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 125%;
+
+	color: #B3FFFA;
+
+	margin-bottom 5px
+
+.hero-status--value
+	font-family: Jura;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 100%;
+
+	color: #FFFFFF;
+	
+	padding-left 22px
+	position relative
+	&:before
+		content ''
+		position absolute
+		height 12px
+		width 12px
+		border-radius 12px
+		background #FFD057
+		left 0
+		top: 50%;
+		transform: translate(0, -50%);
+		
+.to-b-text
+	margin-top 40px
+	min-height 50px
+	display flex
+	position relative
+	padding 20px 0
+	@media screen and (max-width 1024px)
+		&:before
+			content ''
+			height 1px
+			width 100%
+			position absolute
+			background url('/assets/img/hr.svg')
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			transform: translate(-50%, 0);
+			left: 50%;
+			top 0
+		&:after
+			content ''
+			height 1px
+			width 100%
+			position absolute
+			background url('/assets/img/hr.svg')
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			transform: translate(-50%, 0);
+			left: 50%;
+			bottom 0
+		
+.to-b-text__text
+	font-family: Exo2;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 160%;
+	
+	margin auto auto auto 70px
+
+	color: Ultralight-Blue;
+	position relative
+	span
+		color Cyan
+		border-bottom: 1px dashed Cyan
+		padding-bottom: 1px;
+		cursor pointer
+	&:before
+		content ''
+		position absolute
+		height 50px
+		width 50px
+		background url('/assets/img/icon-safe.svg')
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		top: 50%;
+		transform: translate(0%, -50%);
+		left -70px
+
+.cryo
+	background url('/assets/img/cryo.png')
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	height 600px
+	width 820px
+	// margin auto 0 auto auto
+	position absolute
+	right 0
+	top: 50%;
+	transform: translate(0%, -50%);
+	z-index 0
+	@media screen and (max-width 1024px)
+		display none
+	&.compound
+		background url('/assets/img/compound.svg')
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		filter: drop-shadow(0 0 10px Cyan);
+		height 340px
+		width 560px
+	&.statistics
+		background url('/assets/img/graph-hero.svg')
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		filter: drop-shadow(0 0 5px #000);
+		// filter: drop-shadow(0 0 10px Cyan);
+		height 250px !important
+		width 480px !important
+	&.icon-hegic
+		background url('/assets/img/hegic-2.png')
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		filter: drop-shadow(1px 1px 5px Cyan);
+		height 260px !important
+		width 320px !important
+		// transform: translate(0%, -50%) rotate(10deg);
+		
+
+.hero-content--connect
+	min-height 400px
+	position relative
+	display flex	
+	@media screen and (max-width 768px)
+		padding 0 20px 20px 20px
+	@media screen and (min-width 769px) and (max-width 1024px)
+		padding 0 30px 20px 30px
+	@media screen and (min-width 1025px) and (max-width 1280px)
+		padding 0 30px 20px 30px
+	@media screen and (min-width 1281px)
+		padding 0 0 20px 0
+	&:before
+		content ''
+		left 0
+		height: 100%;
+		width: 100%;
+		background url('/assets/img/hero.jpeg')
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		position: absolute;
+	&.lp
+		&:before
+			background url('/assets/img/hero--lp.jpeg')
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			z-index 0
+		// @media screen and (max-width 768px)
+		// 	height 575px
+		@media screen and (min-width 769px) and (max-width 1024px)
+			height 500px
+			margin-bottom 130px
+		// &:after
+		// 	content ''
+		// 	left 0
+		// 	height: 100%;
+		// 	width: 100%;
+		// 	position absolute
+		// 	background: radial-gradient(50% 50% at 50% 50%, #224E94 0%, #22325E 100%);
+		// 	z-index 1
+		// .hero-content-box
+		// 	z-index 2
+	&.statistics
+		&:before
+			background url('/assets/img/card-second--hero.svg')
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			z-index 0
+	&.th
+		background Global-Dark
+		.hero-content-box
+			// margin: auto;
+			z-index 1
+		// .hero-title
+		// 	text-align center
+		// 	margin-bottom: 50px;
+		// 	margin-top: 55px;
+		// .hero-text
+		// 	text-align center
+		// 	margin: auto;
+		// 	padding: 10px 0;
+		&:before
+			// background linear-gradient(180deg, #18305c33, #2a83c366)	
+						
+			// background linear-gradient(180deg, #18305c33, #185d8d66)				
+			// background linear-gradient(180deg, #18305c33, #2787cb66)	
+			// background linear-gradient(180deg, #18305c33, #09609f66)	
+			// background: linear-gradient(180deg, #18305c00, #203060);
+			// background: linear-gradient(180deg, #131d39, #10182d, #131d39);
+				
+			background: linear-gradient(180deg, #64ffff26, #0291ff26);
+			z-index 0
+		&:after
+			content: '';
+			left: 0;
+			height: 100%;
+			width: 100%;
+			// background: url(/assets/img/hegics.svg);
+			// background: url(/assets/img/hegics-2.svg);
+			// background: url(/assets/img/hegics-3.svg);
+			background: url(/assets/img/hegics-4.svg);
+			// background: none
+			background-size: contain;
+			background-repeat: repeat-x;
+			background-position: bottom;
+			position: absolute;
+			z-index: 0;
+			// opacity: .4;
+			// opacity: .4;
+			opacity: .9;
+			@media screen and (max-width 768px)
+				background-repeat: repeat;
+			
+	.hero-content-box
+		z-index 0
+	.hero-title
+		font-size: 36px;
+	.cryo
+		height: 370px;
+		width: 507px;
+		z-index: 0;
+		right: 0;
+		position: absolute;
+		@media screen and (max-width 768px)
+			right 20px
+		@media screen and (min-width 769px) and (max-width 1024px)
+			right 30px
+		@media screen and (min-width 1025px) and (max-width 1280px)
+			right 30px
+		@media screen and (min-width 1281px)
+			right 160px
+		&.compound
+			height 280px
+	.hero-text
+		line-height: 160%;
+
+.hero-links
+	display flex
+	justify-content: start;
+	@media screen and (max-width 768px)
+		flex-direction: column;
+		.hero-link
+			margin: 0 auto 10px 0 !important
+			&:last-child
+				margin 0 auto 20px 0 !important
+	@media screen and (min-width 769px) and (max-width 1024px)
+		justify-content: center;
+	
+.hero-link
+	margin 0 15px
+	font-family: Exo2;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 145%;
+	color: Ultralight-Blue
+	
+	cursor pointer
+	border-bottom 1px dashed Ultralight-Blue
+	&:first-child
+		margin-left 0
+	&:last-child
+		margin-right 0
+
+
+
+.hero-table
+	width: 440px;
+	height: 240px;
+	background url('/assets/img/table-null.png')
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	display: flex;
+	transform: translate(0, -50%);
+	@media screen and (max-width 768px)
+		// position inherit
+		// transform: translate(0, 45px)
+		// margin: auto;
+		display none
+	// @media screen and (max-width 768px)
+	// 	width: 307px;
+	// 	height: 237px;
+	// 	background url('/assets/img/table-min.png')
+	// 	background-size: contain;
+	// 	background-repeat: no-repeat;
+	// 	background-position: center;
+	// 	position inherit
+	// 	transform: translate(0, 0)
+	// 	margin: auto;
+	@media screen and (min-width 769px) and (max-width 1024px)
+		position inherit
+		transform: translate(0, 45px)
+		margin: auto;
+	@media screen and (min-width 1025px) and (max-width 1280px)
+		right 30px
+
+	// @media screen and (min-width 1281px)
+	&.compound
+		background url('/assets/img/compound.svg')
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		filter: drop-shadow(0 0 10px Cyan);
+		height 280px
+		width: 507px;
+
+.hero-table__vals
+	display flex
+	flex-wrap: wrap;
+	padding 60px 10px 20px 190px
+.hero-table__val
+	// flex 1
+	width: 50%;
+	font-family: Jura;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 150%;
+	text-transform: uppercase;
+	color: Cyan;
+	text-shadow: 0 0 2px rgba(69,255,244,0.5);
+	margin-bottom: 5px;
+	margin: auto;
+	text-align: center;
