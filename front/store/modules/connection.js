@@ -8,7 +8,7 @@ import Authereum from "authereum";
 import UniLogin from "@unilogin/provider";
 import BurnerConnectProvider from "@burner-wallet/burner-connect-provider";
 
-import Contracts from 'build/contracts.json'
+import Contracts from 'contracts'
 
 // const infuraId = "a6fbe259558b4c8baf936d949d3d310d"
 const infuraIds = [

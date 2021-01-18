@@ -61,10 +61,12 @@
         .notification__text {{$t("token-holders.s-swap-token.notification")}}
       .form__info
         .form-info-box.overflow-visible
-          .text {{$t("token-holders.s-swap-token.amount-available")}}:
-          .input.connected(:class="{'with-max': true}" data-type='HEGIC')
-            input(disabled :value='available.format(18,18)')
-            .input__max {{$t('user.wallet-balance')}}:
+          .text(style="text-align: center;") {{$t("token-holders.s-swap-token.amount-available")}}:
+          .n-o-schedule-info__val(style="margin: 30px auto 10px auto; color: #45fff4; font-size: 38px; text-shadow: 0 0 2px rgba(69,255,244,0.9);")
+            | {{available.format(18,18)}} HEGIC
+          //-.input.connected(:class="{'with-max': true}" data-type='HEGIC')
+          //-  input(disabled :value='available.format(18,18)')
+          //-  .input__max {{$t('user.wallet-balance')}}:
               |
               | {{hBalance.format(18,3)}}
         //- .form-info-box.with-arrow
@@ -80,9 +82,9 @@
       button.button.primary(@click="start('withdraw')" :disabled='inProgress || available.isZero()')
         | {{$t(inProgress ? 'token-holders.s-swap-token.progress' : 'token-holders.s-swap-token.claim')}}
       .text
-        | rHEGIC tokens are being swapped into HEGIC in a "first come, first served" fashion. HEGIC tokens are being unlocked and swapped in real-time each block. They are are unlocked without any connection to any particular addresses. Please refresh the page right before confirming the swap in order not to waste the gas fees on an unsuccessful swap.
+        | HEGIC tokens are being unlocked and swapped in real-time each block. They are are unlocked without any connection to any particular addresses. 
         //- br
-        | If you don't want to wait for unlocking tokens or if you can't afford to wait for other token holders to swap their tokens alongside with you, consider selling rHEGIC on
+        | If you don't want to wait for unlocking tokens consider selling rHEGIC on
         |
         a.hero-link(href='https://info.uniswap.org/token/0x47c0ad2ae6c0ed4bcf7bc5b380d7205e89436e84' target='_blank') Uniswap
 
@@ -109,9 +111,10 @@
       button.button.primary(@click="start('provide')" :disabled='inProgress || amount.gt(rBalance) || amount.isZero()')
         | {{$t(inProgress ? 'token-holders.s-swap-token.progress' : 'token-holders.s-swap-token.provide')}}
       .text
-        | rHEGIC tokens are being swapped into HEGIC in a "first come, first served" fashion. HEGIC tokens are being unlocked and swapped in real-time each block. They are are unlocked without any connection to any particular addresses. Please refresh the page right before confirming the swap in order not to waste the gas fees on an unsuccessful swap.
+        | HEGIC tokens are being unlocked and swapped in real-time each block. They are are unlocked without any connection to any particular addresses. 
         //- br
-        | If you don't want to wait for unlocking tokens or if you can't afford to wait for other token holders to swap their tokens alongside with you, consider selling rHEGIC on
+        | If you don't want to wait for unlocking tokens consider selling rHEGIC on
         |
         a.hero-link(href='https://info.uniswap.org/token/0x47c0ad2ae6c0ed4bcf7bc5b380d7205e89436e84' target='_blank') Uniswap
 </template>
+<!-- <div class="n-o-schedule-info__val claim-val">0 rHEGIC</div> -->

@@ -436,30 +436,32 @@
 
 
     "s-swap-token":{
-      "title": "HEGIC Token Analytics",
-      "notification":"The Phase I rewards unlock ceremony will take 6 months. During this period of time Phase I rewards will be unlocked on a weekly basis (4.17% of Phase I rewards per week) and token holders will be able to claim them with 100% of Phase I rewards distributed at the end of the ceremony.",
-      "amount-provide":"Amount of rHEGIC to provide",
-      "amount-available":"Amount of HEGIC available to claim",
-      "you-will-receive":"Amount of HEGIC to receive",
-      "swap": "SWAP AND RECEIVE HEGIC",
+		"title": "HEGIC Token Analytics",
+		"notification":"The Phase I rewards unlock ceremony will take 6 months. During this period of time Phase I rewards will be unlocked on a weekly basis (4.17% of Phase I rewards per week) and token holders will be able to claim them with 100% of Phase I rewards distributed at the end of the ceremony.",
+		"amount-provide":"Amount of rHEGIC to provide",
+		"amount-available":"Amount of HEGIC available to claim",
+		"you-will-receive":"Amount of HEGIC to receive",
+		"swap": "SWAP AND RECEIVE HEGIC",
 			"provide": "PROVIDE rHEGIC",
 			"claim": "CLAIM HEGIC",
 			"progress": "PLEASE, WAIT...",
-      "max-available": "Max. swappable",
-      "click-swap":"Conversion rate: 1:1. You will be able to swap rHEGIC for HEGIC after clicking the button and confirming the transaction.",
+		"max-available": "Max. swappable",
+		"click-swap":"Conversion rate: 1:1. You will be able to swap rHEGIC for HEGIC after clicking the button and confirming the transaction.",
 
 
 
-      "hero-title":"PHASE I UNLOCK CEREMONY: <br> TEMPORARY PAUSED",
-      "hero-texts":[
-        "The conversion mechanics will be changed and a new contract will be deployed.",
-        "Sorry for the inconvenience and for 20 hours of awfully bad experience.<br>",
-        "Please wait for the new contract and announcement.<br>"
-      ],
-			"info":[
-				"HEGIC available",
-				"Your rHEGIC balance"
-			]
+		"hero-title":"PHASE I UNLOCK CEREMONY: <br> SWAP rHEGIC for HEGIC",
+		"hero-texts":[
+			"Each rHEGIC token represents one HEGIC token",
+			"which will be claimable after the cumulative on-chain trading<br>",
+			"volume on Hegic during the Phase I exceeds $100M or on 11/11/2021.<br>",
+			"After reaching the milestone, the distribution of liquidity mining<br>",
+			"rewards will continue in rHEGIC that will also need to be swapped.<br>"
+		],
+		"info":[
+			"HEGIC available",
+			"Your rHEGIC balance"
+		]
     }
 	},
 	"token-holders-ibco": {

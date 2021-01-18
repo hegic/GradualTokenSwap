@@ -3,6 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 const {VueLoaderPlugin} = require('vue-loader')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+const contracts = process.env.CONTRACTS_PATH || path.resolve(__dirname, 'contracts.json')
 
 const cssLoader = {
     loader: 'css-loader',
@@ -15,10 +18,10 @@ module.exports = {
     mode: process.env.WEBPACK_DEV_SERVER ? "development" : "production",
     resolve:{
       alias: {
+        contracts,
         utils: path.resolve(__dirname,'front', 'utils'),
         styles: path.resolve(__dirname,'front', 'styles'),
         assets: path.resolve(__dirname, 'assets'),
-        build: path.resolve(__dirname,'build'),
       }
     },
     module: {
@@ -88,10 +91,11 @@ module.exports = {
         gradualTokenSwap: path.resolve(__dirname, './front/index.js'),
     },
     output: {
-        path: path.resolve(__dirname, './dist'),
-        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, 'docs'),
+        filename: 'scripts/[name].bundle.js',
     },
     plugins: [
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: 'Hegic Token Swap',
             filename: 'index.html',

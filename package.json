@@ -56,6 +56,7 @@
   },
   "scripts": {
     "start": "webpack serve",
+    "build": "webpack",
     "ganache": "ganache-cli -d",
     "test": "truffle test",
     "migrate": "truffle migrate --reset",
